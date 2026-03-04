@@ -6,6 +6,7 @@
  */
 
 import { useState, useEffect, useRef } from 'react';
+import { useRouter } from 'next/navigation';
 import { motion, AnimatePresence, useScroll, useTransform } from 'motion/react';
 import {
   MapPin,
@@ -108,6 +109,7 @@ export default function Page() {
   const [lang, setLang] = useState<'ko' | 'en' | 'ja' | 'zh'>('ko');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [routeTrigger, setRouteTrigger] = useState(false);
+  const router = useRouter();
   const { scrollYProgress } = useScroll();
 
   const content = {
@@ -189,6 +191,16 @@ export default function Page() {
             터벅 <span className="text-stone-400 font-light">Teobeok</span>
           </motion.div>
 
+          <select
+            defaultValue="teobeok"
+            onChange={(e) => {
+              if (e.target.value === 'marrimi') router.push('/marrimi');
+            }}
+            className="px-4 py-2 bg-stone-100 border border-stone-200 rounded-full text-sm font-medium text-stone-700 outline-none cursor-pointer hover:bg-stone-200 transition-colors"
+          >
+            <option value="teobeok">터벅</option>
+            <option value="marrimi">매리미</option>
+          </select>
         </div>
       </nav>
 
@@ -243,7 +255,7 @@ export default function Page() {
         {/* Section 2: Budget */}
         <section className="py-32 px-6 bg-white">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div className="order-2 md:order-1">
+            <div>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -263,7 +275,7 @@ export default function Page() {
                 <BudgetInteraction cta={currentContent.budget.cta} />
               </motion.div>
             </div>
-            <div className="order-1 md:order-2">
+            <div>
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -326,7 +338,7 @@ export default function Page() {
         {/* Section 4: Scheduling */}
         <section className="py-32 px-6 bg-white overflow-hidden">
           <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
-            <div className="relative">
+            <div className="relative order-2 md:order-1">
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -345,7 +357,7 @@ export default function Page() {
               initial={{ opacity: 0, x: 50 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="space-y-8"
+              className="space-y-8 order-1 md:order-2"
             >
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-stone-100 rounded-full text-stone-600 text-sm font-medium">
                 <Calendar className="w-4 h-4" /> AI Scheduling
