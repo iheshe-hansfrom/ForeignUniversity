@@ -112,7 +112,7 @@ export default function MarrimiPage() {
 
           <div className="flex items-center justify-center">
             <button className="w-full md:w-auto bg-[#ff3d77] px-10 py-5 rounded-2xl text-lg font-black tracking-widest hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,61,119,0.3)]">
-              데이팅 매칭액 '매리미'
+              데이트 매칭 App '매리미'
             </button>
           </div>
         </motion.div>
