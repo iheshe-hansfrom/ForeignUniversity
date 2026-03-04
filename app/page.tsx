@@ -196,7 +196,7 @@ export default function Page() {
             onChange={(e) => {
               if (e.target.value === 'marrimi') router.push('/marrimi');
             }}
-            className="px-4 py-2 bg-stone-100 border border-stone-200 rounded-full text-sm font-medium text-stone-700 outline-none cursor-pointer hover:bg-stone-200 transition-colors"
+            className="px-3 py-2 pr-6 bg-stone-100 border border-stone-200 rounded-full text-sm font-medium text-stone-700 outline-none cursor-pointer hover:bg-stone-200 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%2344403a%22%20stroke-width%3D%222%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_8px_center]"
           >
             <option value="teobeok">터벅</option>
             <option value="marrimi">매리미</option>

@@ -52,7 +52,8 @@ export default function MarrimiPage() {
   return (
     <div className="bg-[#050505] text-white selection:bg-[#ff3d77] selection:text-white">
       {/* Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-8 py-6 glass-panel border-none">
+      <nav className="fixed top-0 left-0 right-0 z-50 glass-panel border-none">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <div className="text-2xl font-black tracking-tighter italic">
           MARRY<span className="text-[#ff3d77]">ME</span>
         </div>
@@ -62,7 +63,7 @@ export default function MarrimiPage() {
             onChange={(e) => {
               if (e.target.value === "teobeok") router.push("/");
             }}
-            className="px-4 py-2 bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white outline-none cursor-pointer hover:bg-white/20 transition-colors"
+            className="px-3 py-2 pr-6 bg-white/10 border border-white/20 rounded-full text-sm font-medium text-white outline-none cursor-pointer hover:bg-white/20 transition-colors appearance-none bg-[url('data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22white%22%20stroke-width%3D%222%22%3E%3Cpolyline%20points%3D%226%209%2012%2015%2018%209%22%2F%3E%3C%2Fsvg%3E')] bg-no-repeat bg-[position:right_8px_center]"
           >
             <option value="teobeok" className="text-black">
               터벅
@@ -71,6 +72,7 @@ export default function MarrimiPage() {
               매리미
             </option>
           </select>
+        </div>
         </div>
       </nav>
 
@@ -110,7 +112,7 @@ export default function MarrimiPage() {
 
           <div className="flex items-center justify-center">
             <button className="w-full md:w-auto bg-[#ff3d77] px-10 py-5 rounded-2xl text-lg font-black tracking-widest hover:scale-105 transition-transform shadow-[0_0_40px_rgba(255,61,119,0.3)]">
-              데이팅 매칭앱
+              데이팅 매칭액 '매리미'
             </button>
           </div>
         </motion.div>
